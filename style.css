@@ -224,13 +224,13 @@ span {
   position: relative;
 }
 .typing-text span::after {
-  content:'Software Developer';
+  content: "Software Developer";
   color: var(--main-color);
   animation: words 20s infinite;
 }
 
 .typing-text span::before {
-  content:'';
+  content: "";
   background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
@@ -243,15 +243,15 @@ span {
 @keyframes words {
   0%,
   40% {
-    content: 'Web Developer';
+    content: "Web Developer";
   }
   41%,
   80% {
-    content: 'Software Developer';
+    content: "Software Developer";
   }
   81%,
   100% {
-    content: 'Web Designer';
+    content: "Web Designer";
   }
 }
 
@@ -280,36 +280,38 @@ span {
   }
 }
 
-@media(max-width:1000px){
-.home{
-  gap: 4rem;
-}
+@media (max-width: 1000px) {
+  .home {
+    gap: 4rem;
+  }
 }
 
-@media(max-width:995px){
-  .home{
+@media (max-width: 995px) {
+  .home {
     flex-direction: column;
     margin: 5rem 4rem;
   }
-  .home .home-content h3{
+  .home .home-content h3 {
     font-size: 2.5rem;
   }
-  .home-img img{
+  .home-img img {
     width: 70vw;
     margin-top: 4rem;
   }
 }
 
-.skills{
+/* Skills */
+
+.skills {
   background: var(--bg-color);
 }
 
-.skills .heading{
+.skills .heading {
   text-align: center;
   font-size: 5.5rem;
 }
 
-.skills .container{
+.skills .container {
   background-color: #e1352c46;
   color: var(--text-color);
   border-radius: 1rem;
@@ -319,30 +321,27 @@ span {
   margin-top: 2rem;
 }
 
-.skills .container .row{
+.skills .container .row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   flex-wrap: wrap;
   gap: 1.8rem;
 }
 
-.skills .container .bar{
+.skills .container .bar {
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 1rem;
   background: var(--bg-color);
   transition: 0.4s ease;
   cursor: pointer;
-  
 }
 
-.skills .container .bar:hover{
-  
+.skills .container .bar:hover {
   box-shadow: 0 10px 10px var(--main-color);
   transform: scale(1.1);
-
 }
-.skills .container .bar .info{
+.skills .container .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -350,57 +349,56 @@ span {
   margin-top: 1rem;
 }
 
-.skills .container .bar .info span{
+.skills .container .bar .info span {
   font-size: 1.5rem;
   font-weight: 500;
   margin-left: 0.5rem;
 }
 
-.skills .container .bar .info img{
-  width: 70px;
+.skills .container .bar .info img {
+  width: 100px;
   height: 70px;
-
+  border-radius: 10px;
 }
 
-@media screen and(max-width:600px){
+@media screen and(max-width :600px) {
   .skills .container {
     margin: 0;
     padding: 0;
+    width: 10%;
   }
-  .skills .container .row{
-    grid-template-columns: repeat(2, 1fr);
+  .skills .container .row {
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
   }
-  .skills .container{
+  .skills .container {
     margin-top: 5px;
     width: 100%;
   }
 }
 
-
-.education{
-  background: var(--bg-color);
+.education {
+  background: var(--second-bg-color);
 }
 
-.education .heading{
+.education .heading {
   text-align: center;
   font-size: 5.5rem;
 }
 
-
-.education .timeline{
+.education .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.education .timeline::after{
-  content: '';
+.education .timeline::after {
+  content: "";
   position: absolute;
-  width:6px ;
-  background: rgb(90, 64,64);
+  width: 6px;
+  background: rgb(90, 64, 64);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -408,20 +406,20 @@ span {
   z-index: -2px;
 }
 
-.education .container{
+.education .container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
 
-.education .container::after{
+.education .container::after {
   content: "\f501";
   position: absolute;
   width: 25px;
   height: 25px;
   line-height: 25px;
-  background-color: rgb(252,252, 252);
+  background-color: rgb(252, 252, 252);
   border: 4px solid var(--main-color);
   top: 15px;
   border-radius: 50%;
@@ -430,19 +428,19 @@ span {
   text-align: center;
   font-weight: 600;
   font-family: "Font Awesome\ 5 Free";
-  color:rgb(90, 64,64);
+  color: rgb(90, 64, 64);
 }
 
-.education .left{
+.education .left {
   left: 0;
 }
 
-.education .right{
-left: 50%;
+.education .right {
+  left: 50%;
 }
 
-.education .left::before{
-  content: '';
+.education .left::before {
+  content: "";
   height: 0;
   position: absolute;
   top: 22px;
@@ -451,16 +449,14 @@ left: 50%;
   right: 20px;
   border: medium solid var(--main-color);
   border-width: 10px 0 10px 10px;
-  border-color:  transparent transparent transparent var(--main-color);
-  
+  border-color: transparent transparent transparent var(--main-color);
 }
 
-.education .left::after{
+.education .left::after {
   right: -16px;
-  
 }
-.education .right::before{
-  content: '';
+.education .right::before {
+  content: "";
   height: 0;
   position: absolute;
   top: 22px;
@@ -469,33 +465,30 @@ left: 50%;
   left: 20px;
   border: medium solid var(--main-color);
   border-width: 10px 10px 10px 0;
-  border-color:  transparent var(--main-color) transparent transparent ;
+  border-color: transparent var(--main-color) transparent transparent;
 }
 
-.education .right::after{
+.education .right::after {
   left: -16px;
-  
 }
-.education .content{
-  background:  var(--main-color);
+.education .content {
+  background: var(--main-color);
   position: relative;
   border-radius: 6px;
 }
 
-.education .content .tag{
+.education .content .tag {
   font-size: 1.5rem;
   padding-top: 1.5rem;
   padding-left: 1.5rem;
-
-
 }
 
-.education .content .decs{
+.education .content .decs {
   margin-left: 1.5rem;
   padding-bottom: 1rem;
 }
 
-.education .content .decs h3{
+.education .content .decs h3 {
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -505,67 +498,140 @@ left: 50%;
   font-weight: 500;
 }
 
-@media screen and(max-width:600px){
-  .education .timeline{
-    margin-top: 2rem; 
+@media screen and(max-width:600px) {
+  .education .timeline {
+    margin-top: 2rem;
   }
-  .education .timeline::after{
+  .education .timeline::after {
     left: 31px;
   }
-  .education .container{
+  .education .container {
     width: 100%;
     padding-left: 8rem;
     padding-right: 2rem;
-
   }
-  .education .container::after{
+  .education .container::after {
     font-size: 2.2rem;
   }
-  .education .container::before{
+  .education .container::before {
     left: 61px;
     border: medium solid var(--main-color);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--main-color) transparent transparent;
-
   }
-  .education .left::after{
-    left:  15px;
-    
+  .education .left::after {
+    left: 15px;
   }
-  .education .right::after{
-    left:  15px;
+  .education .right::after {
+    left: 15px;
   }
-  .education .right{
+  .education .right {
     left: 0%;
   }
-
 }
 
+/* Project */
 
-.contact  h2{
-  margin-bottom: 3rem;
-  color: white;
+.project {
+  background: var(--bg-color);
 }
 
-.contact .heading{
+.project .heading {
   text-align: center;
   font-size: 5.5rem;
 }
 
+.project .container {
+  background-color: #3d1856a0;
+  color: var(--text-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+}
 
-.contact form{
+.project .container .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.project .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  background: var(--bg-color);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.project .container .bar:hover {
+  box-shadow: 0 10px 10px var(--main-color);
+  transform: scale(1.1);
+}
+.project .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project .container .bar .info span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.project .container .bar .info img {
+  width: 500px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+@media screen and(max-width :600px) {
+  .project .container {
+    margin: 0;
+    padding: 0;
+    width: 10%;
+  }
+  .project .container .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .project .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.contact .heading {
+  text-align: center;
+  font-size: 5.5rem;
+}
+
+.contact form {
   max-width: 70rem;
   margin: 1rem auto;
   margin-bottom: 3rem;
   text-align: center;
 }
 
-.contact form .input-box{
+.contact form .input-box {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 
 .contact form .input-box input,
 .contact form textarea {
@@ -580,6 +646,89 @@ left: 50%;
   resize: none;
 }
 
-.contact form .btn{
+.contact form .btn {
   margin-top: 2rem;
+}
+
+/* Footer setion */
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: var(--second-bg-color);
+}
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: black;
+}
+
+.footer .social a {
+  font-size: 25px;
+  color: white;
+  border: 3px solid rgb(88, 16, 159);
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-5px);
+  background: black;
+  color: var(--main-color);
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li a {
+  color: white;
+  border-radius: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+  border-radius: 3px solid black;
+}
+
+.footer ul li {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+.footer p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 1285px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .footer {
+    padding: 1.5rem;
+  }
 }
