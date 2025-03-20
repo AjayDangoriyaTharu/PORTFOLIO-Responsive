@@ -299,16 +299,16 @@ span {
     margin-top: 4rem;
   }
 }
-
-/* Skills */
-
+/* Skills Section */
 .skills {
   background: var(--bg-color);
+  padding: 2rem 0;
 }
 
 .skills .heading {
   text-align: center;
-  font-size: 5.5rem;
+  font-size: 4rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .skills .container {
@@ -319,28 +319,33 @@ span {
   width: 80%;
   margin: auto;
   margin-top: 2rem;
+  animation: slideUp 1s ease-in-out;
 }
 
+/* Grid Layout */
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
 }
 
+/* Individual Skill Item */
 .skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 1rem;
   background: var(--bg-color);
   transition: 0.4s ease;
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
 }
 
 .skills .container .bar:hover {
   box-shadow: 0 10px 10px var(--main-color);
   transform: scale(1.1);
 }
+
 .skills .container .bar .info {
   display: flex;
   flex-direction: column;
@@ -350,34 +355,85 @@ span {
 }
 
 .skills .container .bar .info span {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  margin-left: 0.5rem;
 }
 
 .skills .container .bar .info img {
-  width: 100px;
-  height: 70px;
+  width: 80px;
+  height: 60px;
   border-radius: 10px;
 }
 
-@media screen and(max-width :600px) {
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .skills .heading {
+    font-size: 3.5rem;
+  }
   .skills .container {
-    margin: 0;
-    padding: 0;
-    width: 10%;
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills .heading {
+    font-size: 3rem;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills .heading {
+    font-size: 2.5rem;
+  }
+  .skills .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skills .heading {
+    font-size: 2rem;
   }
   .skills .container .row {
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
-    gap: 1rem;
-  }
-  .skills .container {
-    margin-top: 5px;
-    width: 100%;
   }
 }
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .education {
   background: var(--second-bg-color);
@@ -531,14 +587,16 @@ span {
 }
 
 /* Project */
-
+/* Project Section */
 .project {
   background: var(--bg-color);
+  padding: 2rem 0;
 }
 
 .project .heading {
   text-align: center;
-  font-size: 5.5rem;
+  font-size: 4rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .project .container {
@@ -546,31 +604,36 @@ span {
   color: var(--text-color);
   border-radius: 1rem;
   padding: 2rem;
-  width: 100%;
+  width: 90%;
   margin: auto;
   margin-top: 2rem;
+  animation: slideUp 1s ease-in-out;
 }
 
+/* Grid Layout */
 .project .container .row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
+/* Individual Project Item */
 .project .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 1rem;
   background: var(--bg-color);
   transition: 0.4s ease;
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
 }
 
 .project .container .bar:hover {
   box-shadow: 0 10px 10px var(--main-color);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
 .project .container .bar .info {
   display: flex;
   flex-direction: column;
@@ -580,35 +643,78 @@ span {
 }
 
 .project .container .bar .info span {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  margin-left: 0.5rem;
 }
 
 .project .container .bar .info img {
-  width: 500px;
-  height: 240px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 10px;
 }
 
-@media screen and(max-width :600px) {
-  .project .container {
-    margin: 0;
-    padding: 0;
-    width: 10%;
-  }
-  .project .container .row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
-    gap: 1rem;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .project .heading {
+    font-size: 3.5rem;
   }
   .project .container {
-    margin-top: 5px;
-    width: 100%;
+    width: 95%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .project .heading {
+    font-size: 3rem;
+  }
+  .project .container .row {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project .heading {
+    font-size: 2.5rem;
+  }
+  .project .container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .project .container .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project .heading {
+    font-size: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .contact h2 {
   margin-bottom: 3rem;
